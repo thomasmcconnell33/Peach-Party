@@ -1,0 +1,24 @@
+1.
+	A player avatar and bank square interaction starts when 
+	ActivatingObjects::doSomething() triggers the bank square's doActivity
+	function which detects if the player avatar is overlapping with itself within
+	Actor.cpp. It then checks if the player is not new to the square and does nothing 
+	if so. If the player avatar lands on the square it calls player avatar's
+	adjust_coins function passing in the amount of coins the bank which is
+	accessed through a pointer the the world. The same world pointer then 
+	resets the coins in the bank and plays the withdraw sound, before returning.
+	If the player is walking through the square it first checks how many coins
+	the player has using get_coins, depositing 5 using the world pointer and its
+	deposit_bank_coins function, or as many coins as the player has if <5.
+	The player's adjust_coins function is then called subtracting 5, which can
+	never become negative due to the function's properties. The world pointer plays
+	the deposit sound and the player is marked as no longer new to the square.
+
+2.
+	-I didn't implement the collision and deletion aspects of the Vortex class.
+	-I didn't implement the DroppingSquare class
+
+3.
+	
+	-Nothing to say c:
+	
