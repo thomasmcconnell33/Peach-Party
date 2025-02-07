@@ -1,4 +1,4 @@
-# Mario Party
+# Peach Party
 A 2D real-time multiplayer game built in C++
 
 ## Features
